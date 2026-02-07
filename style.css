@@ -1,0 +1,73 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 40px;
+}
+
+.stage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+/* shared */
+.shape {
+  transition: transform 0.4s ease;
+}
+
+/* square */
+.square {
+  width: 80px;
+  height: 80px;
+  background: #4caf50;
+}
+
+.square.grow {
+  transform: scale(1.6);
+}
+
+/* circle */
+.circle {
+  width: 80px;
+  height: 80px;
+  background: #2196f3;
+  border-radius: 50%;
+}
+
+.circle.pulse {
+  animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* triangle */
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 70px solid #ff5722;
+  transition: transform 0.3s ease;
+}
+
+.triangle:hover {
+  transform: scale(1.5);
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
