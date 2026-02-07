@@ -2,6 +2,7 @@ body {
   font-family: sans-serif;
   text-align: center;
   padding: 40px;
+  background-color: pink;
 }
 
 .stage {
@@ -17,22 +18,18 @@ body {
   transition: transform 0.4s ease;
 }
 
-/* square */
-.square {
-  width: 80px;
-  height: 80px;
-  background: #4caf50;
-}
-
-.square.grow {
-  transform: scale(1.6);
-}
-
 /* circle */
 .circle {
-  width: 80px;
-  height: 80px;
-  background: #2196f3;
+  width: 50vh;
+  height: 50vh;
+  background: lightgray;
+  border-radius: 50%;
+}
+
+.nose {
+  width: 25vh;
+  height: 25vh;
+  background: gray;
   border-radius: 50%;
 }
 
@@ -50,20 +47,6 @@ body {
   100% {
     transform: scale(1);
   }
-}
-
-/* triangle */
-.triangle {
-  width: 0;
-  height: 0;
-  border-left: 40px solid transparent;
-  border-right: 40px solid transparent;
-  border-bottom: 70px solid #ff5722;
-  transition: transform 0.3s ease;
-}
-
-.triangle:hover {
-  transform: scale(1.5);
 }
 
 button {
