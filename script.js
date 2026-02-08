@@ -1,15 +1,43 @@
 const noButton = document.querySelector(".no");
+const yesButton = document.querySelector(".yes");
+const seal = document.querySelector(".seal");
+const modal = document.querySelector(".modal");
+
 const step = 20; // how far to move per trigger
 const offset = 80; // trigger distance
 let lastMoveTime = 0;
 const cooldown = 50; // milliseconds
 
+yesButton.addEventListener("click", () => {
+  seal.classList.add("zoom");
+
+  setTimeout(() => {
+    seal.classList.add("love");
+  }, 400);
+
+  setTimeout(() => {
+    modal.classList.add("show");
+  }, 1600);
+
+  setTimeout(() => {
+    seal.classList.remove("love", "zoom");
+  }, 2000);
+});
+
 // initialize fixed position
 const rect = noButton.getBoundingClientRect();
-noButton.style.left = `${rect.left}px`;
-noButton.style.top = `54.4%`;
+noButton.style.left = `50.5%`;
+noButton.style.top = `56.35%`;
 noButton.style.position = "fixed";
 noButton.style.transition = "left 0.1s ease, top 0.1s ease";
+
+noButton.addEventListener("click", () => {
+  seal.classList.add("sad");
+
+  setTimeout(() => {
+    seal.classList.remove("sad");
+  }, 2000);
+});
 
 document.addEventListener("mousemove", (e) => {
   const now = Date.now();
