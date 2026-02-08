@@ -4,18 +4,51 @@
     <meta charset="UTF-8" />
     <title>CSS + JS Shape Animation Demo</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h1>Shape Animation Demo</h1>
+    <h1 class="playwrite-nz-basic-400">
+      Vill du fira alla hjärtans dag med William?
+    </h1>
 
     <div class="stage">
-      <div id="square" class="shape square"></div>
-      <div id="circle" class="shape circle"></div>
-      <div id="triangle" class="shape triangle"></div>
+      <div class="seal">
+        <div class="face">
+          <div class="eye left"></div>
+          <div class="eye right"></div>
+          <div class="nose">
+            <div class="whiskers left">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="whiskers right">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="mouth"></div>
+          <div class="heart"></div>
+        </div>
+      </div>
+      <div class="buttons">
+        <button class="yes playwrite-nz-basic-400">JA</button>
+        <button class="no playwrite-nz-basic-400">NEJ</button>
+      </div>
     </div>
-
-    <button id="animateBtn">Animate Shapes</button>
-
+    <div class="modal">
+      <div class="modal-content playwrite-nz-basic-400">
+        <p>William ❤️ Mathilda</p>
+        <br />
+        <h3>🦭</h3>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
